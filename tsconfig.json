@@ -21,18 +21,14 @@
       {
         "name": "next"
       }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    ]
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "inngest/client.js", "app/course/[courseId]/quiz/page.jsx"  ],
+  ],
   "exclude": [
     "node_modules"
   ]
