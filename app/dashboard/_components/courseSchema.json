@@ -1,0 +1,111 @@
+{
+  "courseTitle": "Introduction to Go Programming for Coding Prep",
+  "difficulty": "Easy",
+  "courseSummary": "This course provides a gentle introduction to the Go programming language, specifically tailored for beginners looking to use Go for coding challenges and interview preparation. We will cover the foundational concepts of the language, from setting up your environment and understanding basic syntax to working with variables, data types, control flow, functions, and essential data structures like arrays and slices. By the end of this course, you will have a solid grasp of Go's basics, enabling you to write simple programs and tackle entry-level coding problems.",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapterTitle": "Getting Started with Go",
+      "chapterSummary": "This chapter introduces the Go programming language and its relevance for coding preparation. You will learn how to install Go, set up a basic development environment, and write and run your very first Go program. This is your initial step into the world of Go.",
+      "topics": [
+        "What is Go? Why use it for coding prep?",
+        "Installing Go on different operating systems",
+        "Setting up a development environment (e.g., VS Code)",
+        "Writing your first 'Hello, World!' program",
+        "Compiling and running Go programs (`go run`, `go build`)"
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapterTitle": "Go Program Fundamentals",
+      "chapterSummary": "Dive into the basic structure of a Go program. This chapter explains essential elements like packages, the main function, comments, and how to declare and use variables and constants using Go's simple syntax. Understanding these fundamentals is crucial for writing any Go code.",
+      "topics": [
+        "Packages and the `main` package",
+        "The `main` function: the entry point of a program",
+        "Using comments for code readability",
+        "Declaring variables using `var`",
+        "Short variable declaration (`:=`)",
+        "Declaring and using constants (`const`)"
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapterTitle": "Basic Data Types and Operators",
+      "chapterSummary": "Explore the built-in data types in Go, such as integers, floating-point numbers, booleans, and strings. You will also learn about the various operators (arithmetic, comparison, logical) used to perform operations on these data types and how to print output using the `fmt` package.",
+      "topics": [
+        "Primitive data types: `int`, `float64`, `bool`, `string`",
+        "Zero values for data types",
+        "Arithmetic operators (+, -, *, /, %)",
+        "Comparison operators (==, !=, <, >, <=, >=)",
+        "Logical operators (&&, ||, !)",
+        "Type conversion",
+        "Using the `fmt` package for printing output (`Printf`, `Println`)"
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapterTitle": "Control Flow: Decisions with If and Switch",
+      "chapterSummary": "Learn how to make your programs perform different actions based on conditions. This chapter covers the essential `if`, `else if`, and `else` statements, as well as the versatile `switch` statement, which is very useful for handling multiple conditions elegantly.",
+      "topics": [
+        "The `if` statement",
+        "The `if-else` statement",
+        "The `if-else if-else` construct",
+        "Short statement syntax with `if`",
+        "The `switch` statement",
+        "Using `switch` without an expression"
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapterTitle": "Control Flow: Repetition with Loops",
+      "chapterSummary": "Discover how to execute a block of code multiple times using loops. Go's primary looping construct is the `for` loop, which is incredibly flexible. You'll learn its various forms and how to control loop execution using `break` and `continue`.",
+      "topics": [
+        "The basic `for` loop structure",
+        "Using `for` like a `while` loop",
+        "Infinite loops",
+        "The `for...range` loop (introduction, maybe on strings/slices)",
+        "Using `break` to exit a loop",
+        "Using `continue` to skip loop iterations"
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapterTitle": "Functions",
+      "chapterSummary": "Functions are building blocks of programs. This chapter teaches you how to define, call, and pass arguments to functions in Go. You will also learn about returning values, including how Go handles multiple return values, which is a key feature.",
+      "topics": [
+        "Defining functions with parameters and return types",
+        "Calling functions",
+        "Functions with no parameters or return values",
+        "Functions with multiple return values",
+        "Named return values (brief introduction)",
+        "Passing arguments by value"
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapterTitle": "Introduction to Collections: Arrays and Slices",
+      "chapterSummary": "Learn about fundamental data structures for organizing data: arrays and slices. This chapter introduces the fixed-size array and the more dynamic and commonly used slice. You'll understand how to declare, access, and modify elements.",
+      "topics": [
+        "Arrays: Declaring and accessing elements",
+        "Limitations of arrays",
+        "Slices: What they are and why they are used",
+        "Creating slices (from arrays, using `make`)",
+        "Accessing slice elements (indexing, slicing)",
+        "The `len()` and `cap()` functions",
+        "Appending elements to a slice (`append`)"
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "chapterTitle": "Building Simple Programs and Practice",
+      "chapterSummary": "Bring together all the concepts learned so far to build small, practical programs. This chapter focuses on applying your knowledge of variables, control flow, functions, and basic collections to solve simple problems, preparing you for coding challenges.",
+      "topics": [
+        "Combining control flow and functions",
+        "Working with slices in simple programs",
+        "Simple input/output using `fmt` (optional: basic `fmt.Scan`)",
+        "Writing small programs like number guessing games or simple calculations",
+        "Tips for using Go in coding challenge platforms"
+      ]
+    }
+  ]
+}
