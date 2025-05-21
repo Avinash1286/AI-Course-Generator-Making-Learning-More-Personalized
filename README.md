@@ -54,8 +54,7 @@ Easy Study aims to make learning more efficient and personalized. Instead of sif
 -   **ORM:** [Drizzle ORM](https://orm.drizzle.team/)
 -   **AI Model:** [Google Gemini](https://ai.google.dev/gemini-api)
 -   **Background Jobs:** [Inngest](https://www.inngest.com/)
--   **Payments:** [Stripe](https://stripe.com/)
--   **Deployment:** (Likely Vercel)
+-   **Deployment:** Vercel
 
 ## Getting Started
 
@@ -109,10 +108,3 @@ DATABASE_URL="postgresql://neondb_owner:YOUR_PASSWORD@YOUR_NEON_HOST/neondb?sslm
 INNGEST_EVENT_KEY=YOUR_INNGEST_EVENT_KEY
 INNGEST_SIGNING_KEY=YOUR_INNGEST_SIGNING_KEY # If using signed webhooks
 
-# Stripe Payments
-STRIPE_SECRET_KEY=sk_YOUR_STRIPE_SECRET_KEY
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_YOUR_STRIPE_PUBLISHABLE_KEY # If used client-side
-STRIPE_WEBHOOK_SECRET=whsec_YOUR_STRIPE_WEBHOOK_SECRET # For payment webhook verification
-
-# Application URL
-HOST_URL=http://localhost:3000 # Change for production
