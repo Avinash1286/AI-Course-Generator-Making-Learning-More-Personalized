@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Easy Study - AI Personalized Course Generator
+## Try here: https://ai-course-generator-making-learning-more-personalized.vercel.app/
+
+Easy Study is a web application that leverages AI to generate personalized study materials. Users can create custom courses based on topics, study types (e.g., exam preparation, job interviews), and difficulty levels. The platform then generates course outlines, detailed notes, interactive flashcards, and quizzes to aid in learning.
+
+## Table of Contents
+
+- [About The Project](#about-the-project)
+- [Key Features](#key-features)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Environment Variables](#environment-variables)
+  - [Database Setup](#database-setup)
+  - [Running the Development Server](#running-the-development-server)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+- [Deployment](#deployment)
+- [Learn More (Next.js)](#learn-more-nextjs)
+- [Contributing](#contributing)
+- [License](#license)
+
+## About The Project
+
+Easy Study aims to make learning more efficient and personalized. Instead of sifting through generic study materials, users can generate content tailored to their specific needs. The application uses Google's Gemini AI to create comprehensive course structures and content, providing a rich learning experience with various study tools.
+
+**(Suggestion: Add a screenshot or GIF of the application in action here)**
+<!-- ![App Screenshot](path/to/your/screenshot.png) -->
+
+## Key Features
+
+-   **User Authentication:** Secure sign-up and sign-in functionality powered by Clerk.
+-   **AI-Powered Course Generation:**
+    -   **Course Outline:** Generates structured course outlines based on topic, study type, and difficulty.
+    -   **Chapter Notes:** Creates detailed, HTML-formatted notes for each chapter.
+    -   **Flashcards:** Produces interactive flashcards for key concepts.
+    -   **Quizzes:** Generates multiple-choice quizzes to test understanding.
+-   **Interactive Learning Tools:**
+    -   Carousel-based flashcard viewer.
+    -   Step-by-step quiz interface with feedback.
+-   **User Dashboard:** Centralized place for users to manage their generated courses.
+-   **Responsive Design:** Built with Tailwind CSS and Shadcn/UI for a consistent experience across devices.
+-   **Database Integration:** Uses Drizzle ORM with a Neon PostgreSQL database to store user and course data.
+-   **Background Task Processing:** Leverages Inngest for handling asynchronous tasks like content generation.
+-   **Subscription/Payment (Planned):** Stripe integration for potential future premium features (currently "Coming Soon").
+
+## Built With
+
+-   **Framework:** [Next.js](https://nextjs.org/) (App Router)
+-   **Styling:** [Tailwind CSS](https://tailwindcss.com/), [Shadcn/UI](https://ui.shadcn.com/)
+-   **Authentication:** [Clerk](https://clerk.com/)
+-   **Database:** [Neon](https://neon.tech/) (PostgreSQL)
+-   **ORM:** [Drizzle ORM](https://orm.drizzle.team/)
+-   **AI Model:** [Google Gemini](https://ai.google.dev/gemini-api)
+-   **Background Jobs:** [Inngest](https://www.inngest.com/)
+-   **Payments:** [Stripe](https://stripe.com/)
+-   **Deployment:** (Likely Vercel)
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   Node.js (v18.x or later recommended)
+-   npm, yarn, pnpm, or bun
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/your-project-name.git
+    cd your-project-name
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    # or
+    bun install
+    ```
 
-## Learn More
+### Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env.local` file in the root of your project and add the following environment variables. Obtain these keys from their respective services:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_YOUR_CLERK_PUBLISHABLE_KEY
+CLERK_SECRET_KEY=sk_YOUR_CLERK_SECRET_KEY
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Google Gemini AI
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
-## Deploy on Vercel
+# Neon Database (Drizzle ORM)
+# Replace with your actual Neon database connection string
+DATABASE_URL="postgresql://neondb_owner:YOUR_PASSWORD@YOUR_NEON_HOST/neondb?sslmode=require"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Inngest
+# Get these from your Inngest dashboard
+INNGEST_EVENT_KEY=YOUR_INNGEST_EVENT_KEY
+INNGEST_SIGNING_KEY=YOUR_INNGEST_SIGNING_KEY # If using signed webhooks
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Stripe Payments
+STRIPE_SECRET_KEY=sk_YOUR_STRIPE_SECRET_KEY
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_YOUR_STRIPE_PUBLISHABLE_KEY # If used client-side
+STRIPE_WEBHOOK_SECRET=whsec_YOUR_STRIPE_WEBHOOK_SECRET # For payment webhook verification
+
+# Application URL
+HOST_URL=http://localhost:3000 # Change for production
