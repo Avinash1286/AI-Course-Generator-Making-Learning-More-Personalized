@@ -1,10 +1,9 @@
 import localFont from "next/font/local";
-import {Outfit} from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Provider from "./Provider";
-import { Toaster } from "@/components/ui/sonner"
-export const outfit=Outfit({subsets:['latin']});
+import { Toaster } from "@/components/ui/sonner";
+import { outfit } from "./fonts";
 
 export const metadata = {
   title: "Create Next App",
