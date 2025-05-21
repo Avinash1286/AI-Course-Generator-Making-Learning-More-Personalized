@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
-import Sidebar from './_components/Sidebar'
-import DashboardHeader from './_components/DashboardHeader'
+import Sidebar from '@/app/dashboard/_components/Sidebar'
+import DashboardHeader from '@/app/dashboard/_components/DashboardHeader'
 import { CourseCountContext } from '@/app/_context/CourseCountContext'
 const DashboardLayout = ({children}) => {
   const [totalCourse, setTotalCourse]=useState(0)
