@@ -12,14 +12,7 @@ Easy Study is a web application that leverages AI to generate personalized study
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Environment Variables](#environment-variables)
-  - [Database Setup](#database-setup)
-  - [Running the Development Server](#running-the-development-server)
-- [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-- [Deployment](#deployment)
-- [Learn More (Next.js)](#learn-more-nextjs)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## About The Project
 
